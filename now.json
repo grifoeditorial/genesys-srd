@@ -11,7 +11,7 @@
     "routes": [{
         "src": "^/(.*).html",
         "headers": {
-            "cache-control": "public,max-age=0,must-revalidate"
+            "cache-control": "public,max-age=60,s-maxage=259200,must-revalidate"
         },
         "dest": "$1.html"
     }]
