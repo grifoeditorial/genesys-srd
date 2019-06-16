@@ -1,6 +1,6 @@
 # GeneSys - Documento de Referências
 
-Bem vindo ao documento de Referências para o GeneSys RPG.
+Bem vindo ao Documento de Referências para o GeneSys RPG.
 
 ![teste](http://grifoeditorial.com/wp-content/uploads/2015/12/GeneSys-Fast-Play-Large.jpg)
 

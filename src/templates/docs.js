@@ -8,17 +8,18 @@ import NextPrevious from '../components/NextPrevious'
 import '../components/styles.css'
 import config from '../../config'
 import { MDXProvider } from '@mdx-js/react'
+import { ConvertText2Id } from '../../helpers'
 
-const convertText2Id = (link) => link.toLocaleLowerCase().replace(/[&\/\\#,+()$~%.'":*?<>{}]/g,'').replace(/\s/g, '-')
-
-const MyH1 = (props, wrapper) => <h1 id={convertText2Id(props.children)} {...props} />
+const MyH1 = (props, wrapper) => (
+    <h1 id={ConvertText2Id(props.children)} {...props} />
+)
 
 const components = {
-  h1: MyH1
+    h1: MyH1,
 }
 
 export const wrapRootElement = ({ element }) => (
-  <MDXProvider components={components}>{element}</MDXProvider>
+    <MDXProvider components={components}>{element}</MDXProvider>
 )
 
 const forcedNavOrder = config.sidebar.forcedNavOrder
@@ -57,174 +58,191 @@ injectGlobal`
 `
 
 const Edit = styled('div')`
-  padding: 1rem 1.5rem;
-  text-align: right;
+    padding: 1rem 1.5rem;
+    text-align: right;
 
-  a {
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1em;
-    text-decoration: none;
-    color: #555;
-    border: 1px solid rgb(211, 220, 228);
-    cursor: pointer;
-    border-radius: 3px;
-    transition: all 0.2s ease-out 0s;
-    text-decoration: none;
-    color: rgb(36, 42, 49);
-    background-color: rgb(255, 255, 255);
-    box-shadow: rgba(116, 129, 141, 0.1) 0px 1px 1px 0px;
-    height: 30px;
-    padding: 5px 16px;
-    &:hover {
-      background-color: rgb(245, 247, 249);
+    a {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1em;
+        text-decoration: none;
+        color: #555;
+        border: 1px solid rgb(211, 220, 228);
+        cursor: pointer;
+        border-radius: 3px;
+        transition: all 0.2s ease-out 0s;
+        text-decoration: none;
+        color: rgb(36, 42, 49);
+        background-color: rgb(255, 255, 255);
+        box-shadow: rgba(116, 129, 141, 0.1) 0px 1px 1px 0px;
+        height: 30px;
+        padding: 5px 16px;
+        &:hover {
+            background-color: rgb(245, 247, 249);
+        }
     }
-  }
 `
 
 export default class MDXRuntimeTest extends Component {
-  render () {
-    const { data } = this.props
+    render() {
+        const { data } = this.props
 
-    if (!data) {
-      return '';
-    }
+        if (!data) {
+            return ''
+        }
 
-    const {
-      allMdx,
-      mdx,
-      site: {
-        siteMetadata: { docsLocation, title }
-      }
-    } = data
-    const gitHub = require('../components/images/github.svg')
+        const {
+            allMdx,
+            mdx,
+            site: {
+                siteMetadata: { docsLocation, title },
+            },
+        } = data
+        const gitHub = require('../components/images/github.svg')
 
-    const navItems = allMdx.edges
-      .map(({ node }) => node.fields.slug)
-      .filter(slug => slug !== '/')
-      .sort()
-      .reduce(
-        (acc, cur) => {
-          if (forcedNavOrder.find(url => url === cur)) {
-            return { ...acc, [cur]: [cur] }
-          }
+        const navItems = allMdx.edges
+            .map(({ node }) => node.fields.slug)
+            .filter(slug => slug !== '/')
+            .sort()
+            .reduce(
+                (acc, cur) => {
+                    if (forcedNavOrder.find(url => url === cur)) {
+                        return { ...acc, [cur]: [cur] }
+                    }
 
-          const prefix = cur.split('/')[1]
+                    const prefix = cur.split('/')[1]
 
-          if (prefix && forcedNavOrder.find(url => url === `/${prefix}`)) {
-            return { ...acc, [`/${prefix}`]: [...acc[`/${prefix}`], cur] }
-          } else {
-            return { ...acc, items: [...acc.items, cur] }
-          }
-        },
-        { items: [] }
-      )
+                    if (
+                        prefix &&
+                        forcedNavOrder.find(url => url === `/${prefix}`)
+                    ) {
+                        return {
+                            ...acc,
+                            [`/${prefix}`]: [...acc[`/${prefix}`], cur],
+                        }
+                    } else {
+                        return { ...acc, items: [...acc.items, cur] }
+                    }
+                },
+                { items: [] }
+            )
 
-    const nav = forcedNavOrder
-      .reduce((acc, cur) => {
-        return acc.concat(navItems[cur])
-      }, [])
-      .concat(navItems.items)
-      .map(slug => {
-        const { node } = allMdx.edges.find(
-          ({ node }) => node.fields.slug === slug
+        const nav = forcedNavOrder
+            .reduce((acc, cur) => {
+                return acc.concat(navItems[cur])
+            }, [])
+            .concat(navItems.items)
+            .map(slug => {
+                const { node } = allMdx.edges.find(
+                    ({ node }) => node.fields.slug === slug
+                )
+
+                return { title: node.fields.title, url: node.fields.slug }
+            })
+
+        // meta tags
+        const metaTitle = mdx.frontmatter.title
+        const metaDescription = mdx.frontmatter.metaDescription
+        let canonicalUrl = config.gatsby.siteUrl
+        canonicalUrl =
+            config.gatsby.pathPrefix !== '/'
+                ? canonicalUrl + config.gatsby.pathPrefix
+                : canonicalUrl
+        canonicalUrl = canonicalUrl + mdx.fields.slug
+
+        return (
+            <Layout {...this.props}>
+                <Helmet>
+                    {metaTitle ? <title>{metaTitle}</title> : null}
+                    {metaTitle ? (
+                        <meta name="title" content={metaTitle} />
+                    ) : null}
+                    {metaDescription ? (
+                        <meta name="description" content={metaDescription} />
+                    ) : null}
+                    {metaTitle ? (
+                        <meta property="og:title" content={metaTitle} />
+                    ) : null}
+                    {metaDescription ? (
+                        <meta
+                            property="og:description"
+                            content={metaDescription}
+                        />
+                    ) : null}
+                    {metaTitle ? (
+                        <meta property="twitter:title" content={metaTitle} />
+                    ) : null}
+                    {metaDescription ? (
+                        <meta
+                            property="twitter:description"
+                            content={metaDescription}
+                        />
+                    ) : null}
+                    <link rel="canonical" href={canonicalUrl} />
+                </Helmet>
+                <div className={'titleWrapper'}>
+                    <h1 className={'title'}>{mdx.fields.title}</h1>
+                    <Edit className={'mobileView'}>
+                        <Link
+                            className={'gitBtn'}
+                            to={`${docsLocation}/${mdx.parent.relativePath}`}
+                        >
+                            <img src={gitHub} alt={'Github logo'} /> Edit on
+                            GitHub
+                        </Link>
+                    </Edit>
+                </div>
+                <div className={'mainWrapper'}>
+                    <MDXProvider components={components}>
+                        <MDXRenderer>{mdx.code.body}</MDXRenderer>
+                    </MDXProvider>
+                </div>
+                <div className={'addPaddTopBottom'}>
+                    <NextPrevious mdx={mdx} nav={nav} />
+                </div>
+            </Layout>
         )
-
-        return { title: node.fields.title, url: node.fields.slug }
-      })
-
-    // meta tags
-    const metaTitle = mdx.frontmatter.title
-    const metaDescription = mdx.frontmatter.metaDescription
-    let canonicalUrl = config.gatsby.siteUrl
-    canonicalUrl =
-      config.gatsby.pathPrefix !== '/'
-        ? canonicalUrl + config.gatsby.pathPrefix
-        : canonicalUrl
-    canonicalUrl = canonicalUrl + mdx.fields.slug
-
-    return (
-      <Layout {...this.props}>
-        <Helmet>
-          {metaTitle ? <title>{metaTitle}</title> : null}
-          {metaTitle ? <meta name='title' content={metaTitle} /> : null}
-          {metaDescription ? (
-            <meta name='description' content={metaDescription} />
-          ) : null}
-          {metaTitle ? <meta property='og:title' content={metaTitle} /> : null}
-          {metaDescription ? (
-            <meta property='og:description' content={metaDescription} />
-          ) : null}
-          {metaTitle ? (
-            <meta property='twitter:title' content={metaTitle} />
-          ) : null}
-          {metaDescription ? (
-            <meta property='twitter:description' content={metaDescription} />
-          ) : null}
-          <link rel='canonical' href={canonicalUrl} />
-        </Helmet>
-        <div className={'titleWrapper'}>
-          <h1 className={'title'}>{mdx.fields.title}</h1>
-          <Edit className={'mobileView'}>
-            <Link
-              className={'gitBtn'}
-              to={`${docsLocation}/${mdx.parent.relativePath}`}
-            >
-              <img src={gitHub} alt={'Github logo'} /> Edit on GitHub
-            </Link>
-          </Edit>
-        </div>
-        <div className={'mainWrapper'}>
-          <MDXProvider components={components}>
-            <MDXRenderer>{mdx.code.body}</MDXRenderer>
-          </MDXProvider>
-        </div>
-        <div className={'addPaddTopBottom'}>
-          <NextPrevious mdx={mdx} nav={nav} />
-        </div>
-      </Layout>
-    )
-  }
+    }
 }
 
 export const pageQuery = graphql`
-  query($id: String!) {
-    site {
-      siteMetadata {
-        title
-        docsLocation
-      }
-    }
-    mdx(fields: { id: { eq: $id } }) {
-      fields {
-        id
-        title
-        slug
-      }
-      code {
-        body
-      }
-      tableOfContents
-      parent {
-        ... on File {
-          relativePath
+    query($id: String!) {
+        site {
+            siteMetadata {
+                title
+                docsLocation
+            }
         }
-      }
-      frontmatter {
-        # metaTitle
-        # metaDescription
-        title
-      }
-    }
-    allMdx {
-      edges {
-        node {
-          fields {
-            slug
-            title
-          }
+        mdx(fields: { id: { eq: $id } }) {
+            fields {
+                id
+                title
+                slug
+            }
+            code {
+                body
+            }
+            tableOfContents
+            parent {
+                ... on File {
+                    relativePath
+                }
+            }
+            frontmatter {
+                # metaTitle
+                # metaDescription
+                title
+            }
         }
-      }
+        allMdx {
+            edges {
+                node {
+                    fields {
+                        slug
+                        title
+                    }
+                }
+            }
+        }
     }
-  }
 `
