@@ -48,19 +48,48 @@ O site do SRD é desenvolvido com Gatsby e pode ser estendido de acordo com a ne
 
 ## Instalação técnica
 
-### Git e Github
+Internamente usamos apenas máquinas windows e por isso vamos focar apenas nessa plataforma. De toda forma, todas as depêndencias possuem seus próprios guias específicos e vamos colocar os links em cada uma.
 
-Mussum Ipsum, cacilds vidis litro abertis. Casamentiss faiz malandris se pirulitá. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! Quem manda na minha terra sou euzis! Detraxit consequat et quo num tendi nada.
+-   **Node**: Basta instalar o MSI do node no [site oficial](https://nodejs.org/en/download/).
+-   **Terminal**: é preciso usar o terminal do windows em alguns momentos, algumas formas de executa-lo:
+    - Abrir a janela de executar (iniciar -> Executar ou `WIN + r`), digitar cmd ou powershell;
+    - No diretório que deseja abrir o terminal clicar com o botão direito do mouse segurando o `SHIFT`, terá uma opção "Abrir terminal aqui"
+-   **Gatsby**: Com terminal aberto, digitar:
 
-### Node
+```sh
 
-Quem num gosta di mé, boa gentis num é. Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. Sed non consequat odio. Per aumento de cachacis, eu reclamis. Atirei o pau no gatis, per gatis num morreus.
+npm install -g gatsby gatsby-cli
 
-### Gatsby
+```
 
-Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Manduma pindureta quium dia nois paga.
+A instalação completa dele pode ser encontrada no seu [tutorial](https://www.gatsbyjs.org/tutorial/part-zero/).
+
+-   **Git e Github**: Utilizaremos a versão desktop do cliente gitbub do windows, basta instalar [esse executável](https://desktop.github.com/)
 
 ## Git básico
+
+### Copiando o conteúdo (clone)
+
+O Git é descentralizado, ou seja, não é preciso estar conectado o tempo todo com o servidor para poder realizar suas modificações. Para isso o trabalho é feito numa cópia local que é denominada clone.
+Para ter seu clone local utilizando o cliente do GitHub para Windows, que é bem intuitivo; basta clicar em `File -> Clone Repository` que ele irá sincronizar os conteúdos do servidor com sua máquina local em uma pasta a sua escolha
+
+### Sincronizando ajustes (commit)
+
+Basta abrir o repositório no cliente do Github. Haverá uma janela no canto esquerdo escrito `Commit to master` ao clicar nele informando um título para os ajustes ele irá consolidar suas alterações para enviar para o servidor.
+
+Com o commit feito, basta clicar em `publish`
+
+## Rodando Local
+
+Com todos as depêndencias instaladas basta executar com o terminal no diretório em que foi clonado o SRD:
+
+```sh
+
+gatsby develop
+
+```
+
+
 
 Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis. Suco de cevadiss deixa as pessoas mais interessantis. Aenean aliquam molestie leo, vitae iaculis nisl. Sapien in monti palavris qui num significa nadis i pareci latim.
 
