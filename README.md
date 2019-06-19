@@ -63,6 +63,6 @@ Nosso "roadmap" técnico no momento é o seguinte:
 
 ## Licenças e Créditos
 
-O sistema de regras (conteúdo na pasta contents é liberado como [Creative Commons Attribution-ShareAlike](https://creativecommons.org/licenses/by-sa/3.0/).
+O sistema de regras (conteúdo na pasta contents) é liberado como [Creative Commons Attribution-ShareAlike](https://creativecommons.org/licenses/by-sa/3.0/).
 
 O site é desenvolvido com [Gatsby](https://www.gatsbyjs.org/) com o starter [Gitbook](https://github.com/hasura/gatsby-gitbook-starter) ambos também licenciados como [MIT](https://github.com/gatsbyjs/gatsby/blob/master/LICENSE).
