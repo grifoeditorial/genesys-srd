@@ -42,28 +42,29 @@ O SRD está sendo desenvolvido como uma PWA, a principais vantagens que nos leva
 
 GeneSys é liberado como Creative Common Attribution-ShareAlike... sugestões e alterações podem ser incorporadas no texto...podendo ser editado diretamente no GitHub com poucos clicks... As páginas do SRD possuem no rodapé o link para edição no GitHub...
 
+A forma mais trivial de contribuir é encontrando o arquivo no diretório `contents/` fazendo as modificações necessárias e solicitando um pedido de mudança (pull request) pelo próprio site do Github. Todas as páginas possuem no rodapé o link "Editar no Github" que já direciona a navegação para a página de edição e pull request.
+
+Caso deseje contribuir com grandes porções de texto aconselhamos a instalação do [Gatsby](https://www.gatsbyjs.org/tutorial/part-zero/) e do [Visual Studio Code](https://code.visualstudio.com/Download). Fizemos esse [guia inicial]('https://github.com/grifoeditorial/genesys-srd/blob/master/instalando-contribuindo.md') para quem não conhece nada de ambos e deseje começar.
+
 ## Contribuindo para o Site do SRD
 
-O site do SRD é desenvolvido com Gatsby e pode ser estendido de acordo com a necessidade... pretendemos mantê-lo o mais simples possível tal qual o próprio sistema de RPG que ele suporta...
+O site do SRD é desenvolvido com Gatsby e pode ser estendido de acordo com a necessidade. Pretendemos mantê-lo o mais simples possível de forma que possua uma grande compatibilidade com navegadores móveis.
 
-## Instalação técnica
+Entretanto, tal qual o sistema de regras, estamos sempre abertos a contribuições. Basta enviar o Pull Requests que iremos avaliar a modificação para incorpora-la ao código.
 
-### Git e Github
+Para evitar frustrações, antes de enviar grandes ajustes ou melhorias, solicitamos que abra uma Issue no Github para que possamos discutir os pontos que seriam alterados e a necessidade das alterações.
 
-Mussum Ipsum, cacilds vidis litro abertis. Casamentiss faiz malandris se pirulitá. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! Quem manda na minha terra sou euzis! Detraxit consequat et quo num tendi nada.
+Nosso "roadmap" técnico no momento é o seguinte:
 
-### Node
-
-Quem num gosta di mé, boa gentis num é. Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. Sed non consequat odio. Per aumento de cachacis, eu reclamis. Atirei o pau no gatis, per gatis num morreus.
-
-### Gatsby
-
-Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Manduma pindureta quium dia nois paga.
-
-## Git básico
-
-Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis. Suco de cevadiss deixa as pessoas mais interessantis. Aenean aliquam molestie leo, vitae iaculis nisl. Sapien in monti palavris qui num significa nadis i pareci latim.
+-   [Notificações de Atualização do SRD](https://github.com/grifoeditorial/genesys-srd/issues/1): Criar um sistema de inscrição para notificar as pessoas que tenham instalado o SRD como APP
+-   [Layout: Descer botão de "Edit on Github" para o rodapé](https://github.com/grifoeditorial/genesys-srd/issues/2)
+-   ~~Atualizar PWA quando usuário acessa-la novamente caso haja novo conteúdo~~
+-   ~~Navegação: Links do rodapé para página anterior e próxima~~
+-   ~~Navegação: Ancoras para títulos com caracteres especiais~~
+-   ~~Navegação: Ancoras para títulos com espaços~~
 
 ## Licenças e Créditos
 
-Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Manduma pindureta quium dia nois paga.
+O sistema de regras (conteúdo na pasta contents é liberado como [Creative Commons Attribution-ShareAlike](https://creativecommons.org/licenses/by-sa/3.0/).
+
+O site é desenvolvido com [Gatsby](https://www.gatsbyjs.org/) com o starter [Gitbook](https://github.com/hasura/gatsby-gitbook-starter) ambos também licenciados como [MIT](https://github.com/gatsbyjs/gatsby/blob/master/LICENSE).
