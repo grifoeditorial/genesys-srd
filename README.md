@@ -6,17 +6,15 @@ O objetivo do SRD é ser um guia com referências rápidas e atualizadas para se
 
 Para manter-se acessível, ele é desenvolvido como um PWA responsiva o que garante o acesso em dispositivos móveis mesmo que estejam desconectados.
 
--   [GeneSys - Referência de documentação](#genesys---refer%C3%AAncia-de-documenta%C3%A7%C3%A3o)
-    -   [Contexto](#contexto)
-    -   [Recursos](#recursos)
-    -   [Contribuindo para o Sistema de Regras](#contribuindo-para-o-sistema-de-regras)
-    -   [Contribuindo para o Site do SRD](#contribuindo-para-o-site-do-srd)
-    -   [Instalação técnica](#instala%C3%A7%C3%A3o-t%C3%A9cnica)
-        -   [Git e Github](#git-e-github)
-        -   [Node](#node)
-        -   [Gatsby](#gatsby)
-    -   [Git básico](#git-b%C3%A1sico)
-    -   [Licenças e Créditos](#licen%C3%A7as-e-cr%C3%A9ditos)
+Nesse arquivo você vai encontrar:
+
+- [GeneSys - Referência de documentação](#GeneSys---Refer%C3%AAncia-de-documenta%C3%A7%C3%A3o)
+  - [Contexto](#Contexto)
+  - [Recursos](#Recursos)
+  - [Contribuindo para o Sistema de Regras](#Contribuindo-para-o-Sistema-de-Regras)
+  - [Contribuindo para o Site do SRD](#Contribuindo-para-o-Site-do-SRD)
+  - [Licenças e Créditos](#Licen%C3%A7as-e-Cr%C3%A9ditos)
+
 
 ## Contexto
 
@@ -44,7 +42,7 @@ GeneSys é liberado como Creative Common Attribution-ShareAlike... sugestões e 
 
 A forma mais trivial de contribuir é encontrando o arquivo no diretório `contents/` fazendo as modificações necessárias e solicitando um pedido de mudança (pull request) pelo próprio site do Github. Todas as páginas possuem no rodapé o link "Editar no Github" que já direciona a navegação para a página de edição e pull request.
 
-Caso deseje contribuir com grandes porções de texto aconselhamos a instalação do [Gatsby](https://www.gatsbyjs.org/tutorial/part-zero/) e do [Visual Studio Code](https://code.visualstudio.com/Download). Fizemos esse [guia inicial]('https://github.com/grifoeditorial/genesys-srd/blob/master/instalando-contribuindo.md') para quem não conhece nada de ambos e deseje começar.
+Caso deseje contribuir com grandes porções de texto aconselhamos a instalação do [Gatsby](https://www.gatsbyjs.org/tutorial/part-zero/) e do [Visual Studio Code](https://code.visualstudio.com/Download). Fizemos esse [guia inicial](https://github.com/grifoeditorial/genesys-srd/blob/master/instalando-contribuindo.md) para quem não conhece nada de ambos e deseje começar.
 
 ## Contribuindo para o Site do SRD
 
