@@ -42,57 +42,29 @@ O SRD está sendo desenvolvido como uma PWA, a principais vantagens que nos leva
 
 GeneSys é liberado como Creative Common Attribution-ShareAlike... sugestões e alterações podem ser incorporadas no texto...podendo ser editado diretamente no GitHub com poucos clicks... As páginas do SRD possuem no rodapé o link para edição no GitHub...
 
+A forma mais trivial de contribuir é encontrando o arquivo no diretório `contents/` fazendo as modificações necessárias e solicitando um pedido de mudança (pull request) pelo próprio site do Github. Todas as páginas possuem no rodapé o link "Editar no Github" que já direciona a navegação para a página de edição e pull request.
+
+Caso deseje contribuir com grandes porções de texto aconselhamos a instalação do [Gatsby](https://www.gatsbyjs.org/tutorial/part-zero/) e do [Visual Studio Code](https://code.visualstudio.com/Download). Fizemos esse [guia inicial]('https://github.com/grifoeditorial/genesys-srd/blob/master/instalando-contribuindo.md') para quem não conhece nada de ambos e deseje começar.
+
 ## Contribuindo para o Site do SRD
 
-O site do SRD é desenvolvido com Gatsby e pode ser estendido de acordo com a necessidade... pretendemos mantê-lo o mais simples possível tal qual o próprio sistema de RPG que ele suporta...
+O site do SRD é desenvolvido com Gatsby e pode ser estendido de acordo com a necessidade. Pretendemos mantê-lo o mais simples possível de forma que possua uma grande compatibilidade com navegadores móveis.
 
-## Instalação técnica
+Entretanto, tal qual o sistema de regras, estamos sempre abertos a contribuições. Basta enviar o Pull Requests que iremos avaliar a modificação para incorpora-la ao código.
 
-Internamente usamos apenas máquinas windows e por isso vamos focar apenas nessa plataforma. De toda forma, todas as depêndencias possuem seus próprios guias específicos e vamos colocar os links em cada uma.
+Para evitar frustrações, antes de enviar grandes ajustes ou melhorias, solicitamos que abra uma Issue no Github para que possamos discutir os pontos que seriam alterados e a necessidade das alterações.
 
--   **Node**: Basta instalar o MSI do node no [site oficial](https://nodejs.org/en/download/).
--   **Terminal**: é preciso usar o terminal do windows em alguns momentos, algumas formas de executa-lo:
-    - Abrir a janela de executar (iniciar -> Executar ou `WIN + r`), digitar cmd ou powershell;
-    - No diretório que deseja abrir o terminal clicar com o botão direito do mouse segurando o `SHIFT`, terá uma opção "Abrir terminal aqui"
--   **Gatsby**: Com terminal aberto, digitar:
+Nosso "roadmap" técnico no momento é o seguinte:
 
-```sh
-
-npm install -g gatsby gatsby-cli
-
-```
-
-A instalação completa dele pode ser encontrada no seu [tutorial](https://www.gatsbyjs.org/tutorial/part-zero/).
-
--   **Git e Github**: Utilizaremos a versão desktop do cliente gitbub do windows, basta instalar [esse executável](https://desktop.github.com/)
-
-## Git básico
-
-### Copiando o conteúdo (clone)
-
-O Git é descentralizado, ou seja, não é preciso estar conectado o tempo todo com o servidor para poder realizar suas modificações. Para isso o trabalho é feito numa cópia local que é denominada clone.
-Para ter seu clone local utilizando o cliente do GitHub para Windows, que é bem intuitivo; basta clicar em `File -> Clone Repository` que ele irá sincronizar os conteúdos do servidor com sua máquina local em uma pasta a sua escolha
-
-### Sincronizando ajustes (commit)
-
-Basta abrir o repositório no cliente do Github. Haverá uma janela no canto esquerdo escrito `Commit to master` ao clicar nele informando um título para os ajustes ele irá consolidar suas alterações para enviar para o servidor.
-
-Com o commit feito, basta clicar em `publish`
-
-## Rodando Local
-
-Com todos as depêndencias instaladas basta executar com o terminal no diretório em que foi clonado o SRD:
-
-```sh
-
-gatsby develop
-
-```
-
-
-
-Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis. Suco de cevadiss deixa as pessoas mais interessantis. Aenean aliquam molestie leo, vitae iaculis nisl. Sapien in monti palavris qui num significa nadis i pareci latim.
+-   [Notificações de Atualização do SRD](https://github.com/grifoeditorial/genesys-srd/issues/1): Criar um sistema de inscrição para notificar as pessoas que tenham instalado o SRD como APP
+-   [Layout: Descer botão de "Edit on Github" para o rodapé](https://github.com/grifoeditorial/genesys-srd/issues/2)
+-   ~~Atualizar PWA quando usuário acessa-la novamente caso haja novo conteúdo~~
+-   ~~Navegação: Links do rodapé para página anterior e próxima~~
+-   ~~Navegação: Ancoras para títulos com caracteres especiais~~
+-   ~~Navegação: Ancoras para títulos com espaços~~
 
 ## Licenças e Créditos
 
-Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Manduma pindureta quium dia nois paga.
+O sistema de regras (conteúdo na pasta contents é liberado como [Creative Commons Attribution-ShareAlike](https://creativecommons.org/licenses/by-sa/3.0/).
+
+O site é desenvolvido com [Gatsby](https://www.gatsbyjs.org/) com o starter [Gitbook](https://github.com/hasura/gatsby-gitbook-starter) ambos também licenciados como [MIT](https://github.com/gatsbyjs/gatsby/blob/master/LICENSE).
