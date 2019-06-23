@@ -6,7 +6,7 @@ const config = {
         'Referência de Documentação para o sistema de RPG GeneSys da Grifo Editorial',
     gatsby: {
         pathPrefix: '/',
-        siteUrl: 'http://genesys-rpg.com',
+        siteUrl: 'https://genesys-srd.grifo.now.sh',
         gaTrackingId: null,
     },
     header: {
