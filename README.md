@@ -59,8 +59,8 @@ Tal qual o sistema de regras, solicitamos que abra uma [Issue](https://github.co
 Nosso "roadmap" técnico no momento é o seguinte:
 
 -   [Layout: Descer botão de "Edit on Github" para o rodapé](https://github.com/grifoeditorial/genesys-srd/issues/2)
--   [Divulgar que o site do SRD é uma PWA](https://github.com/grifoeditorial/genesys-srd/issues/1): Quando aberto em dispositivos móveis notificar o usuário que o site pode ser instalado (add to home screen)
 -   [Notificações de Atualização do SRD](https://github.com/grifoeditorial/genesys-srd/issues/4): Criar um sistema de inscrição para notificar as pessoas que tenham instalado o SRD como APP
+-   ~~[Divulgar que o site do SRD é uma PWA](https://github.com/grifoeditorial/genesys-srd/issues/1): Quando aberto em dispositivos móveis notificar o usuário que o site pode ser instalado (add to home screen)~~
 -   ~~Atualizar PWA quando usuário acessá-la novamente caso haja novo conteúdo~~
 -   ~~Navegação: Links do rodapé para página anterior e próxima~~
 -   ~~Navegação: Ancoras para títulos com caracteres especiais~~
