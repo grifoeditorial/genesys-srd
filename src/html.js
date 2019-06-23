@@ -20,7 +20,7 @@ export default class HTML extends React.Component {
                         />
                     ) : null}
                     <meta
-                        property="description"
+                        property="Description"
                         content={config.siteDescription}
                     />
                     <meta
@@ -55,6 +55,10 @@ export default class HTML extends React.Component {
                 </head>
                 <body {...this.props.bodyAttributes}>
                     {this.props.preBodyComponents}
+                    <noscript>
+                        Essa página é uma aplicação (PWA) e depende muito de
+                        javascript. Por favor, ative-o para continuar.
+                    </noscript>
                     <div
                         key={`body`}
                         id="___gatsby"

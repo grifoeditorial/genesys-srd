@@ -180,6 +180,10 @@ export default class MDXRuntimeTest extends Component {
                     ) : null}
                     <link rel="canonical" href={canonicalUrl} />
                 </Helmet>
+                <noscript>
+                    Essa página é uma aplicação (PWA) e depende muito de
+                    javascript. Por favor, ative-o para continuar.
+                </noscript>
                 <div className={'titleWrapper'}>
                     <h1 className={'title'}>{mdx.fields.title}</h1>
                     <Edit className={'mobileView'}>
