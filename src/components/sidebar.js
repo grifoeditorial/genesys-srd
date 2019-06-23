@@ -238,6 +238,8 @@ const SidebarLayout = ({ location }) => (
                                         <ExternalLink size={14} />
                                     </ListItem>
                                 )
+                            } else {
+                                return ''
                             }
                         })}
                     </ul>
