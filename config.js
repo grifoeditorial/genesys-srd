@@ -3,7 +3,7 @@ const config = {
     pwaPathPrefix: '/',
     siteShortTitle: 'GeneSys - SRD',
     siteDescription:
-        'Referência de Documentação para o sistema de RPG GeneSys da Grifo Editorial',
+        'Referência de Documentação para o sistema de RPG GeneSys da Grifo Editorial - Seu jogo sob seu controle.',
     gatsby: {
         pathPrefix: '/',
         siteUrl: 'https://genesys-srd.grifo.now.sh',
@@ -22,10 +22,11 @@ const config = {
         links: [{ text: '', link: '' }],
     },
     siteMetadata: {
-        title: 'GeneSys - System Reference Document (SRD)',
+        title: 'GeneSys - Referência de Documentação (SRD)',
         description:
-            'Documentation built with mdx. Powering https://genesys-srd.grifo.now.sh',
+            'Referência de Documentação para o sistema de RPG GeneSys da Grifo Editorial - Seu jogo sob seu controle.',
         ogImage: null,
+        keywords: 'RPG, Regras, Sistema, Documentação',
         docsLocation:
             'https://github.com/grifoeditorial/genesys-srd/tree/master/content',
         favicon: 'logo-midnight-blue.png',

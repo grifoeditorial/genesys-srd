@@ -20,6 +20,14 @@ export default class HTML extends React.Component {
                         />
                     ) : null}
                     <meta
+                        property="description"
+                        content={config.siteDescription}
+                    />
+                    <meta
+                        property="keywords"
+                        content={config.siteMetadata.keywords}
+                    />
+                    <meta
                         property="twitter:card"
                         content="summary_large_image"
                     />
